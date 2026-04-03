@@ -1,118 +1,93 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f172a, #020617);
+  font-family: 'Poppins', sans-serif;
+  background: #020617;
   color: white;
 }
 
-/* Layout */
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* Navbar */
+/* NAV */
 .nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 50px;
+  padding: 20px;
 }
 
 .nav a {
   margin-left: 20px;
-  text-decoration: none;
   color: #94a3b8;
-  transition: 0.3s;
+  text-decoration: none;
 }
 
-.nav a:hover {
-  color: #38bdf8;
-}
-
-/* Hero */
+/* HERO */
 .hero {
   text-align: center;
-  margin-bottom: 60px;
+  padding: 80px 20px;
 }
 
-.hero h1 {
-  font-size: 42px;
+.title {
+  font-size: 50px;
 }
 
-.hero p {
-  color: #94a3b8;
+.gradient {
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
-/* Buttons */
-.buttons {
-  margin-top: 20px;
-}
-
+/* BUTTON */
 .btn {
-  display: inline-block;
   margin: 10px;
   padding: 12px 24px;
+  border-radius: 30px;
   background: #38bdf8;
   color: black;
-  border-radius: 30px;
   text-decoration: none;
   transition: 0.3s;
 }
 
 .btn:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
-.btn.outline {
+.outline {
   background: transparent;
   border: 1px solid #38bdf8;
   color: #38bdf8;
 }
 
-/* Cards */
+/* CARD */
 .card {
-  background: rgba(255, 255, 255, 0.05);
+  margin: 40px auto;
   padding: 25px;
+  max-width: 800px;
   border-radius: 20px;
-  margin-bottom: 30px;
+  background: rgba(255,255,255,0.05);
   backdrop-filter: blur(10px);
-  transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* Grid */
+/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
   gap: 20px;
+  padding: 20px;
 }
 
-/* Footer */
+/* FOOTER */
 .footer {
   text-align: center;
-  margin-top: 40px;
+  margin: 40px;
   color: #64748b;
 }
 
-/* Animations */
-.fade-in {
+/* ANIMATION */
+.reveal {
   opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s ease forwards;
+  transform: translateY(40px);
+  transition: 1s;
 }
 
-.delay {
-  animation-delay: 0.5s;
-}
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
