@@ -1,40 +1,77 @@
 export default function App() {
   return (
     <div className="container">
-      <header>
-        <h1>Your Name</h1>
-        <p className="subtitle">Portfolio Website</p>
+      
+      <nav className="nav">
+        <h2>Portfolio</h2>
+        <div>
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+
+      <header className="hero">
+        <h1 className="fade-in">MARK JULIAN B. LANDAYAN</h1>
+        <p className="fade-in delay">
+          Modern Portfolio • Clean Design • Fast Learner
+        </p>
+
+        <div className="buttons">
+          <a href="mailto:landayanmarkj@gmail.com" className="btn">
+            Email Me
+          </a>
+          <a href="tel:+639760923948" className="btn outline">
+            Call Me
+          </a>
+        </div>
       </header>
 
-      <section>
+      <section id="about" className="card fade-in">
         <h2>About Me</h2>
         <p>
-          This is a general portfolio website. You can introduce yourself here and describe your skills,
-          experience, or goals.
+          Motivated and reliable individual with strong foundation in administrative work,
+          data handling, and digital tools. Fast learner and adaptable to new environments.
         </p>
       </section>
 
-      <section>
-        <h2>Skills</h2>
-        <ul>
-          <li>Skill 1</li>
-          <li>Skill 2</li>
-          <li>Skill 3</li>
-        </ul>
+      <section id="skills" className="grid">
+        <div className="card fade-in">
+          <h3>Core Skills</h3>
+          <ul>
+            <li>Data Entry</li>
+            <li>File Management</li>
+            <li>Communication</li>
+            <li>Teamwork</li>
+          </ul>
+        </div>
+
+        <div className="card fade-in delay">
+          <h3>Tech Skills</h3>
+          <ul>
+            <li>MS Office</li>
+            <li>Google Workspace</li>
+            <li>Canva</li>
+            <li>Zoom</li>
+          </ul>
+        </div>
       </section>
 
-      <section>
-        <h2>Projects</h2>
-        <ul>
-          <li>Project 1</li>
-          <li>Project 2</li>
-        </ul>
-      </section>
-
-      <section>
+      <section id="contact" className="card fade-in">
         <h2>Contact</h2>
-        <p>Email: your@email.com</p>
+        <p>
+          📧 <a href="mailto:landayanmarkj@gmail.com">landayanmarkj@gmail.com</a>
+        </p>
+        <p>
+          📞 <a href="tel:+639760923948">+63 976 092 3948</a>
+        </p>
+        <p>📍 Malolos City, Bulacan</p>
       </section>
+
+      <footer className="footer fade-in">
+        <p>© 2026 Your Portfolio</p>
+      </footer>
+
     </div>
   );
 }
